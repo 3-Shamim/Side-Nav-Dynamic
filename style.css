@@ -1,0 +1,99 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    top: 0;
+    bottom: 0;
+    width: 270px;
+    border: 1px solid #dddddd;
+}
+
+.menu .header {
+    width: 100%;
+    padding: 10px 0;
+    color: #ffffff;
+    background-color: #31629F;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
+
+.menu .wrapper {
+    position: relative;
+}
+
+.menu ul {
+    width: 270px;
+    height: 456px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+
+.menu li {
+    position: static;
+    cursor: pointer;
+}
+
+.menu li .wrapper {
+    position: absolute;
+    display: none;
+    z-index: 10;
+    top: 0;
+    left: 230px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu li a::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+}
+
+.menu li:last-child a::before {
+    width: 0;
+    height: 0;
+}
+
+.menu li a span {
+    position: absolute;
+    font-size: 30px;
+    top: 0;
+    right: 30px;
+
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu li:hover > a {
+    color: #31629F;
+}
+
+.menu li:hover > .wrapper {
+    display: block;
+}
+
+.menu li {
+    padding: 0 20px;
+}
